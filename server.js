@@ -1,16 +1,13 @@
 var express = require('express');
 var app = express();
-var axios = require('axios');
-
-const keys = require('./keys.js');
-
-const { redditClientId, redditSecretId } = keys;
+const mechMarket = require('./mechMarket.js');
 
 app.get('/', function(req, res) {
   res.send('Hello World!');
 });
 
 app.get('/listings', function(req, res) {
+  mechMarket.getAuthKey();
   res.send('listings');
 });
 
