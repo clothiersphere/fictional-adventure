@@ -8,8 +8,8 @@
 # testing
 /coverage
 
-#keys
-keys.js
+#login
+reddit.js
 
 # production
 /build
